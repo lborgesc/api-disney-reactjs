@@ -21,7 +21,7 @@ export class Home extends Component {
   loadPosts = async ( ) => {
     const { page, postsPerPage } = this.state;
 
-    const postsResponse = await fetch('https://api.disneyapi.dev/characters')
+    const postsResponse = await fetch('https://api.disneyapi.dev/character')
     const postsJson = await postsResponse.json( )
     this.setState({ 
       posts: postsJson.data.slice(page, postsPerPage), 
